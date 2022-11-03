@@ -1,0 +1,11 @@
+body {
+  background-color: burlywood;
+  color: purple;
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
+}
+  
+nav {
+  display: flex;
+  justify-content: space-around;
+}
