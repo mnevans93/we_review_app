@@ -11,9 +11,10 @@ class IndexReviews extends React.Component {
                         const { title, author, subject, _id } = review
                         return (
                             <li key={_id}>
-                                <a href={`/reviews/${_id}`}>{title}</a><br />
-                                <p>{author}</p>
-                                <p>{subject}</p>
+                                <a href={`/we-review/reviews/${_id}`}>{title}</a><br />
+                                <p>Album: {subject}</p>
+                                <p>Author: {author}</p>
+                                <br />
                             </li>
                         )
                     }))}

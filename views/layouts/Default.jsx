@@ -2,7 +2,7 @@ const React = require('react')
 
 class Default extends React.Component {
     render () {
-        const { loggedIn, title } = this.props
+        const { title } = this.props
         return (
         <html>
             <head>
@@ -12,7 +12,7 @@ class Default extends React.Component {
             <body>
                 <nav>
                     <a href="/we-review/reviews/new">Post a New Review</a>
-                    <a href="/we-review/reviews/browse">Browse All Reviews</a>
+                    {title == "Check Out The Reviews!" ? '' : <a href="/we-review/reviews/">Browse All Reviews</a>}
                 </nav>
                 {this.props.children}
             </body>
