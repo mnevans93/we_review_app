@@ -7,6 +7,7 @@ const dataController = require('./dataController.js')
 router.get('/', dataController.indexReviews, viewController.indexReviews)
 
 // N
+router.get('/new', viewController.newReview)
 
 // D
 router.delete('/:id', dataController.deleteReview, viewController.redirectReviewIndex)
@@ -15,6 +16,7 @@ router.delete('/:id', dataController.deleteReview, viewController.redirectReview
 router.put('/:id', dataController.updateReview, viewController.redirectReviewShow)
 
 // C
+router.post('/', dataController.createReview, viewController.redirectReviewShow)
 
 // E
 router.get('/:id/edit', dataController.showOrEditReview, viewController.editReview)

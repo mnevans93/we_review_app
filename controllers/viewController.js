@@ -7,6 +7,9 @@ const viewController = {
     redirectReviewIndex (req, res, next) {
         res.redirect(RESOURCE_PATH)
     },
+    newReview (req, res, next) {
+        res.render('reviews/NewReview')
+    },
     editReview (req, res, next) {
         res.render('reviews/EditReview', res.locals.data)
     },
