@@ -2,7 +2,7 @@
 
 ## Introduction
 Hi there! Thanks for checking out this repository for my *WeReview* app. This project was started as part of the General Assembly Software Engineering Immersive bootcamp. The idea was to create a platform for user-focused music reviews.
-![Screenshot](Screenshot.png)
+![Screenshot](./Screenshot.PNG)
 
 ## Resources
 Trello Board: https://trello.com/b/kUfwC0eI/wereview-app
