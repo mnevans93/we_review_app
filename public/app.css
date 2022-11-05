@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
 html, body {
   height: 100%;
   background-image: url('./music background.png');
   background-size: contain;
   margin: 0;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
+  font-family: 'Kanit', sans-serif;
 }
   
 nav {
@@ -73,6 +75,10 @@ input, textarea {
   color: whitesmoke;
 }
 
+textarea {
+  resize: vertical;
+}
+
 input.submit:hover {
   color: black;
   background-color: crimson;
@@ -92,6 +98,7 @@ li {
 
 li > a, div > a {
   color: rgb(0, 100, 0);
+  margin-top: 1%;
 }
 
 li > a:hover, div > a:hover {

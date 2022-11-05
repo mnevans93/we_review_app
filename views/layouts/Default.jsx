@@ -11,7 +11,7 @@ class Default extends React.Component {
             </head>
             <body>
                 <nav>
-                    <a href="/we-review/reviews/new">Post a New Review</a>
+                    {title == "Write a New Review!" ? '' : <a href="/we-review/reviews/new">Post a New Review</a>}
                     {title == "Check Out The Reviews!" ? '' : <a href="/we-review/reviews/">Browse All Reviews</a>}
                 </nav>
                 {this.props.children}

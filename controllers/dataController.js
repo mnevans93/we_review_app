@@ -1,6 +1,6 @@
 const Review = require('../models/review')
 
-const checkForError = (err) => {
+const checkForError = (err, res) => {
     if (err) {
         res.status(400).send({msg: err.message})
         return true
@@ -11,7 +11,7 @@ const dataController = {
     // I
     indexReviews (req, res, next) {
         Review.find({}, (err, foundReviews) => {
-            if (checkForError(err) === false) {
+            if (checkForError(err, res) === false) {
                 res.locals.data.reviews = foundReviews
                 next()
             }
@@ -22,7 +22,7 @@ const dataController = {
     // D
     deleteReview (req, res, next) {
         Review.findByIdAndDelete(req.params.id, (err, deletedReview) => {
-            if (checkForError(err) === false) {
+            if (checkForError(err, res) === false) {
                 res.locals.data.review = deletedReview
                 next()
             }
@@ -31,7 +31,7 @@ const dataController = {
     // U
     updateReview (req, res, next) {
         Review.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedReview) => {
-            if (checkForError(err) === false) {
+            if (checkForError(err, res) === false) {
                 res.locals.data.review = updatedReview
                 next()
             }
@@ -40,7 +40,7 @@ const dataController = {
     // C
     createReview (req, res, next) {
         Review.create(req.body, (err, createdReview) => {
-            if (checkForError(err) === false) {
+            if (checkForError(err, res) === false) {
                 res.locals.data.review = createdReview
                 next()
             }
@@ -49,7 +49,7 @@ const dataController = {
     // E, S
     showOrEditReview (req, res, next) {
         Review.findById(req.params.id, (err, foundReview) => {
-            if (checkForError(err) === false) {
+            if (checkForError(err, res) === false) {
                 res.locals.data.review = foundReview
                 next()
             }
