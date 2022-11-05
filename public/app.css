@@ -41,17 +41,42 @@ li > p {
   margin: 0.25% 0;
 }
 
-div.review {
+div.reviewEdit > form, div.reviewShow {
   background-color: tomato;
   display: flex;
   flex-direction: column;
   text-align: center;
   width: 50%;
   margin: auto;
-  margin-top: 10%;
   border-radius: 25px;
   padding: 1%;
   left: 0;
+}
+
+div.reviewEdit, div.reviewShow {
+  margin-top: 10%;
+}
+
+div.review > form.delete {
+  margin-top: 1%;
+}
+
+input {
+  text-align: center;
+  font-size: large;
+}
+
+input, textarea {
+  background-color: rgb(50, 50, 50);
+  border: 1px solid white;
+  border-radius: 10px;
+  color: whitesmoke;
+}
+
+input.submit:hover {
+  color: black;
+  background-color: crimson;
+  transition-duration: 500ms;
 }
 
 li {
@@ -65,15 +90,15 @@ li {
   border-radius: 25px;
 }
 
-li > a {
+li > a, div > a {
   color: rgb(0, 100, 0);
 }
 
-li > a:hover {
+li > a:hover, div > a:hover {
   color: white;
   transition-duration: 500ms;
 }
 
-div.review > h1, div.review > h2, div.review > p {
+div.reviewShow > h1, div.reviewShow > h2, div.reviewShow > p, div.reviewShow > a {
   margin: 0.25%;
 }
