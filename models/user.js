@@ -8,6 +8,6 @@ const userSchema = new Schema({
   reviews: { type: Array, required: true, default: []}
 })
 
-const User = model('User, userSchema')
+const User = model('User', userSchema)
 
 module.exports = User

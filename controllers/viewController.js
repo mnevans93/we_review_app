@@ -19,6 +19,7 @@ const viewController = {
     redirectReviewShow (req, res, next) {
         res.redirect(`${RESOURCE_PATH}/${res.locals.data.review._id}`)
     },
+    
 }
 
 module.exports = viewController
